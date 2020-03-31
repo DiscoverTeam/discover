@@ -1,0 +1,11 @@
+<% provide(:title, 'All Places') %>
+<h1>All Places</h1>
+
+<div class="list is-hoverable">
+  <% @places.each do |place| %>
+    <a class="list-item">
+      <%= link_to place.name, place %>,
+      <%= place.address %>
+    </a>
+  <% end %>
+</div>
