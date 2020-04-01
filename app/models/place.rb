@@ -9,4 +9,5 @@ class Place < ApplicationRecord
   validates :current_capacity,
             :maximum_capacity,
             presence: true
+  belongs_to :location
 end
