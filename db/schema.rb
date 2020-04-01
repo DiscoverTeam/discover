@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_01_143753) do
+ActiveRecord::Schema.define(version: 2020_04_01_213845) do
 
   create_table "locations", force: :cascade do |t|
     t.string "city"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2020_04_01_143753) do
     t.string "address"
     t.integer "current_capacity"
     t.integer "maximum_capacity"
+    t.float "longitude"
+    t.float "latitude"
     t.index ["location_id"], name: "index_places_on_location_id"
   end
 
