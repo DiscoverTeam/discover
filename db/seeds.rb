@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Create a main sample place.
+=begin
 Place.create!(name:  "Example Place",
               address: "example address",
               current_capacity: 0,
@@ -21,3 +22,4 @@ Place.create!(name:  "Example Place",
                 current_capacity: 0,
                 maximum_capacity: 400)
 end
+=end
