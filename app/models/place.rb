@@ -1,4 +1,6 @@
 class Place < ApplicationRecord
+  belongs_to :location
+  default_scope -> { order(current_capacity: :desc) }
   validates :name,
             presence: true,
             length: { maximum: 50 },
@@ -8,6 +10,6 @@ class Place < ApplicationRecord
             length: { maximum: 255 }
   validates :current_capacity,
             :maximum_capacity,
+            :location_id,
             presence: true
-  belongs_to :location
 end
