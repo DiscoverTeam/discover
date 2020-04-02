@@ -1,0 +1,22 @@
+<% provide(:title, @location.area) %>
+
+<section class="hero is-dark is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <%= @location.area %>
+      </h1>
+      <h3 class="subtitle">
+        <%= @location.city %>
+      </h3>
+    </div>
+    <div class="container has-text-centered">
+      <% if @location.places.any? %>
+        <h3>Places</h3>
+        <ol class="places">
+          <%= render @places %>
+        </ol>
+      <% end %>
+    </div>
+  </div>
+</section>

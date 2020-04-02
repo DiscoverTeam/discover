@@ -6,4 +6,9 @@ class Location < ApplicationRecord
   validates :area,
             presence: true,
             length: { maximum: 20 }
+
+  def feed
+    Place.where("location_id = ?", id)
+  end
+
 end
