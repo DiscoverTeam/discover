@@ -3,4 +3,8 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
     @places = @location.places
   end
+
+  def index
+
+  end
 end
