@@ -1,1 +1,11 @@
-<h1>discover</h1>
+<% provide(:title, "Select a Location") %>
+
+<h1>Select a Location</h1>
+
+<div class="hero-body">
+  <% @locations.each do |location| %>
+    <button class="button">
+      <%= link_to location.area, location %>
+    </button>
+  <% end %>
+</div>

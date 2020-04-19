@@ -1,4 +1,7 @@
-<a id="place-<%= place.id %>" class="list-item">
-  <span class="place-name"><%= link_to place.name, place %></span>
-  <span class="place-address"><%= place.address %></span>
+<a id="place-<%= place.id %>">
+  <button class="button">
+    <span class="place-name"><%= link_to place.name, place %></span>,
+     <span class="place-address"> <%= place.address %></span>
+  </button>
 </a>
+
