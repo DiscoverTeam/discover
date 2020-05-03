@@ -29,6 +29,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # CSS Framework
 gem "bulma-rails", "~> 0.8.0"
 
+# Geocoding Gem
+gem "geocoder"
+
 # Gem to create fake model instances
 gem 'faker',          '2.1.2'
 
