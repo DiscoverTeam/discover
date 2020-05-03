@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_224432) do
+ActiveRecord::Schema.define(version: 2020_05_03_123253) do
 
   create_table "locations", force: :cascade do |t|
     t.string "city"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_224432) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "address"
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_224432) do
     t.integer "maximum_capacity"
     t.float "longitude"
     t.float "latitude"
+    t.integer "location_id"
     t.index ["location_id"], name: "index_places_on_location_id"
   end
 
